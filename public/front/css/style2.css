@@ -1,0 +1,306 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+.team-style1 img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+    object-position: top;
+}
+
+/* 19-03-2025 @harshit */
+
+.footer-bbnt{
+    position: absolute;
+    right: 6px;
+    top: 8px;
+}
+
+
+/* 02-04-2025 @arun */
+
+input.form-control {
+    height: 52px !important;
+    /* Adjust as needed */
+    line-height: 1.5;
+}
+
+
+.loader-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    color: white;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.registration-form {
+    position: relative;
+}
+
+.select-typee {
+    position: absolute;
+    top: 66px;
+    /* Adjust distance below 'Register' heading */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center align horizontally */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    /* Background to avoid overlap */
+    padding: 5px 10px;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.member-page-swiper {
+    overflow: hidden;
+}
+
+.radio-group {
+    display: flex;
+    position: relative;
+    gap: 0;
+    background: #f4f4f4;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.custom-radio {
+    display: none;
+}
+
+.radio-label {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    background: transparent;
+    padding: 8px 34px;
+    color: #000;
+    /* border-bottom: 2px solid #2fbfa7; */
+
+}
+
+.custom-radio:checked+.radio-label {
+    padding: 8px 34px;
+    color: #fff;
+    animation: bg-fade 0.3s ease-in-out;
+    background: #ea591f;
+    border-radius: 5px;
+    animation: bg-fade 0.3s ease-in-out;
+}
+
+
+.payment-mode-custom-select {
+    position: relative;
+}
+
+.payment-mode-custom-select select {
+    width: 100%;
+    padding-right: 30px;
+    appearance: none;
+}
+
+.payment-mode-custom-select i {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.course-custom-select {
+    position: relative;
+}
+
+.course-custom-select select {
+    width: 100%;
+    padding-right: 30px;
+    appearance: none;
+}
+
+.course-custom-select i {
+    position: absolute;
+    right: 10px;
+    top: 52%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.barcode_img {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+
+
+/* 03-04-2025 @arun css become-a-member */
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient Background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    color: white;
+    overflow: hidden;
+}
+
+/* Left side text content */
+.text-content {
+    flex: 1;
+    padding-right: 30px;
+}
+.text-content h6 {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+.text-content p {
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-in-out forwards;
+}
+
+/* Different delay for each paragraph */
+.text-content p:nth-child(1) { animation-delay: 0.2s; }
+.text-content p:nth-child(2) { animation-delay: 0.4s; }
+.text-content p:nth-child(3) { animation-delay: 0.6s; }
+.text-content p:nth-child(4) { animation-delay: 0.8s; }
+.text-content p:nth-child(5) { animation-delay: 1s; }
+
+/* Call-to-Action Button */
+.register-btn {
+    display: inline-block;
+    background: #fff;
+    color: #ff7e5f;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.register-btn:hover {
+    background: #ff5733;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 87, 51, 0.5);
+}
+
+/* Right side image */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframe Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* Tablet */
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .text-content {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .image-container img {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 600px) { /* Mobile */
+    .content-container {
+        padding: 20px;
+    }
+    .register-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .image-container img {
+        max-width: 220px;
+    }
+}

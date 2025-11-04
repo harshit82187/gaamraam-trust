@@ -1,0 +1,102 @@
+
+/*# sourceMappingURL=custom.min.css.map */
+
+.user-list-card {
+    margin-top: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.user-list-card2 {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+
+.property-facility li{
+    background-color: var(--vz-purple) !important;
+}
+
+/* 14/01/2025 */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 34px;
+	height: 20px;
+	}
+	.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	}
+	.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 34px;
+	}
+	.slider:before {
+	position: absolute;
+	content: "";
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: .4s;
+	}
+	input:checked + .slider {
+	background-color: #4CAF50;
+	}
+	input:checked + .slider:before {
+	transform: translateX(14px);
+	}
+
+
+	/* 16-01-2025 */
+	#dataTable tbody tr:nth-child(odd):hover {
+        background-color: #e9ecef;
+    }
+    #dataTable tbody tr:nth-child(even):hover {
+        background-color: #f8d7da;
+    }
+
+	.count-circle {
+		display: inline-block;
+		background-color: #007bff; /* Blue background color */
+		color: white; /* White text color */
+		font-size: 12px; /* Adjust size as needed */
+		font-weight: bold;
+		width: 24px; /* Circle width */
+		height: 24px; /* Circle height */
+		line-height: 24px; /* Align text vertically */
+		border-radius: 50%; /* Make it a perfect circle */
+		text-align: center; /* Center text horizontally */
+		margin-left: 10px; /* Add spacing from the heading */
+		position: absolute;
+		top: 18px;
+	}
+
+	/* 20-01-2025 @harshit vendor sidebar  */
+	.nav-link.active-option {
+		background-color: rgba(0, 123, 255, 0.1); /* Transparent blue background */
+		color: #007bff; /* Adjust text color for better visibility */
+		border-radius: 4px; /* Optional: rounded corners for better aesthetics */
+	}
+
+	.nav-link.active-option:hover {
+		background-color: rgba(0, 123, 255, 0.2); /* Slightly darker on hover */
+		color: #0056b3; /* Darker text color on hover */
+	}
+
+
+	/* 01-03-2025 @harshit */
+    .customTextarea {
+    width: 1064px;
+    height: 87px;
+    resize: none;
+}

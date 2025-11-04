@@ -1,0 +1,20 @@
+
+/*# sourceMappingURL=custom.min.css.map */
+#collegeTable_length{
+    margin-top: -16px;
+
+}
+.dashboard-card {
+padding: 40px;
+}
+.dataTables_filter label{
+width: 234px;
+margin-left: 942px;
+margin-top: -48px;
+}
+.select2-container .select2-selection--single {
+    height: 37px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 35px !important;
+}

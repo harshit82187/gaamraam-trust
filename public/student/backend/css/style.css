@@ -1,0 +1,260 @@
+
+
+.box-title{
+    display: none;
+}
+
+.heading{
+    margin: 0;
+}
+
+.btnntn{
+    width: 100px;
+}
+
+.box-tools{
+    display: flex;
+    justify-content: end;
+}
+
+.swal2-title{
+    font-size: 4rem;
+}
+
+.swal2-icon .swal2-icon-content {
+    display: flex;
+    align-items: center;
+    font-size: 6.75em;
+}
+
+.swal2-icon{
+    width: 14em;
+    height: 14em;
+}
+
+.swal2-popup{
+    width: 30%;
+    height: 50%;
+}
+
+.swal2-styled.swal2-confirm {
+    width: 40%;
+    font-size: 18px;
+}
+
+.swal2-styled.swal2-cancel{
+    width: 35%;
+    font-size: 18px;
+}
+.user-list-card{
+margin-top: 80px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.user-list-card2{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.swal2-popup swal2-modal swal2-large swal2-icon-warning swal2-show{
+    height:50%;
+}
+
+.user-list-card {
+    margin-top: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.user-list-card2 {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* 14/01/2025 */
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 34px;
+	height: 20px;
+	}
+	.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	}
+	.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 34px;
+	}
+	.slider:before {
+	position: absolute;
+	content: "";
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: .4s;
+	}
+	input:checked + .slider {
+	background-color: #4CAF50;
+	}
+	input:checked + .slider:before {
+	transform: translateX(14px);
+	}
+
+
+
+	/* 16/01/2025 */
+
+	
+.circle-container {
+	display: inline-flex;
+	gap: 20px; 
+  }
+  
+	  .dots_contain {
+	  bottom: 0;
+	  position: fixed;
+	  width: 100%;
+	  height: 100%;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  transform: translate(50%, 50%);
+	  z-index: 9999999999;
+  }
+  
+  
+  .animated-circle {
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(45deg, #0efff8, #1310ff);
+	border-radius: 50%; 
+	display: inline-flex;     
+	box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .animated-circle.one {
+	animation: bounce-one 1.5s ease-in-out infinite;
+  }
+  
+  .animated-circle.two {
+	animation: bounce-two 1.5s ease-in-out infinite;
+  }
+  
+  .animated-circle.three {
+	animation: bounce-three 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes bounce-one {
+	0%, 20%, 50%, 80%, 100% {
+	  transform: translateY(0);
+	}
+	40% {
+	  transform: translateY(-10px);
+	}
+	60% {
+	  transform: translateY(-5px);
+	}
+  }
+  @keyframes bounce-two {
+	0%, 20%, 50%, 80%, 100% {
+	  transform: translateY(0);
+	}
+	40% {
+	  transform: translateY(-30px);
+	}
+	60% {
+	  transform: translateY(-15px);
+	}
+  }
+  @keyframes bounce-three {
+	0%, 20%, 50%, 80%, 100% {
+	  transform: translateY(0);
+	}
+	40% {
+	  transform: translateY(-10px);
+	}
+	60% {
+	  transform: translateY(-25px);
+	}
+  }
+
+  /* 16-01-2025 */
+  #dataTable tbody tr:nth-child(odd):hover {
+	background-color: #e9ecef;
+}
+#dataTable tbody tr:nth-child(even):hover {
+	background-color: #f8d7da; 
+}
+.user-list-card2 .card-head {
+    padding: 20px;
+    border-bottom: 1px solid #d6d6d6;
+}
+.user-list-card2 .card-head h5 {
+    margin: 0;
+}
+.duolingo-btn img {
+	max-width: 150px !important;
+	height: 100px !important;
+}
+
+.duolingo-btn {
+	gap: 10px;
+}
+.frm-new{
+	position: relative;
+}
+#result {
+position: absolute;
+top: 37px;
+left: -18px;
+height: 44px !important;
+width: 100% !important;
+padding: 10px;
+z-index: 99;
+background-color: #fff;
+}
+
+/* 22-02-2025 */
+
+.notification_bell {
+	padding: 12px 15px;
+	display: block;
+	background-color: #032444;
+	border-radius: 50%;
+	color: #fff;
+	position: relative;
+}
+.notification_bell i {
+	font-size: 16px;
+}
+.notification_count {
+position: absolute;
+padding: 2px 7px;
+background-color: #fff;
+border-radius: 50%;
+color: #032444;
+top: -8px;
+right: -4px;
+border: 1px solid #032444;
+}
+
+/* 26-05-2025 @harshit ticket-css */
+
+.ticket-image img {
+    max-width: 150px;
+    margin: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    object-fit: cover;
+}
+

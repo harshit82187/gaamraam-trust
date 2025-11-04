@@ -1,0 +1,12 @@
+@media(max-width:1199px){
+    .enrol-form {
+      background: #0000006e;
+      position: initial !important;
+      
+     
+      width: 60% !important;
+    
+      margin: auto;
+      margin-top: 20px;
+  }
+  }
