@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+	<head>
+		<meta charset="utf-8" />
+		<title>@if($type != 3)Student Password Update @else Institute Member Password Update @endif</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="{{ asset('front/images/Gaam_Raam_logo.png') }}">
+		<script src="{{ asset('admin/assets/js/layout.js') }}"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link href="{{ asset('admin/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('admin/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('admin/assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css">
+	</head>
+	<body>
+		@include('front.layout.validate')
+		<div class="auth-page-wrapper pt-5">
+			<!-- auth page bg -->
+			<div class="auth-one-bg-position auth-one-bg" id="auth-particles">
+				<div class="bg-overlay"></div>
+				<div class="shape">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 120">
+						<path d="M 0,36 C 144,53.6 432,123.2 720,124 C 1008,124.8 1296,56.8 1440,40L1440 140L0 140z"></path>
+					</svg>
+				</div>
+			</div>
+			<!-- auth page content -->
+			<div class="auth-page-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="text-center mt-sm-5 mb-4 text-white-50">
+								<div>
+									<a href="{{ url('/') }}" class="d-inline-block auth-logo">
+									<img src="{{ asset('front/images/Gaam_Raam_logo.png') }}" alt="" height="120px" width="140px">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end row -->
+					<div class="row justify-content-center">
+						<div class="col-md-8 col-lg-6 col-xl-5">
+							<div class="card mt-4">
+								@if($type != 3)
+								<div class="card-body p-4">
+									<div class="text-center mt-2">
+										<h5 class="text-primary" style="color:#23b24b !important">Student Update  Password</h5>
+									</div>
+									<div class="p-2 mt-4">
+										<form id="forgot-passward-form" action="{{ route('student-postresetPassword') }}" method="POST" >
+											@csrf
+                                            <input type="hidden" name="token" value="{{ $token }}">
+											<div class="mb-3">
+												<label for="useremail" class="form-label">Email <span class="text-danger">*</span></label>
+												<input type="email" class="form-control email_input" name="email"  value="{{ $email }}" readonly>
+											</div>		
+                                            
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="Create Your Password" autocomplete="one-time-code" required>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="cpassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                                <input type="password" class="form-control" id="cpassword" name="cpassword" placeholder="Enter Confirm Password" autocomplete="one-time-code" required>
+                                                <span id="cpassword-error" class="text-danger" ></span>
+                                            </div>
+                                            
+											
+											<div class="mt-4">
+												<button class="btn btn-success w-100" type="submit">Submit</button>
+											</div>
+											
+											
+										</form>
+									</div>
+								</div>
+								@else 
+									<div class="card-body p-4">
+										<div class="text-center mt-2">
+											<h5 class="text-primary" style="color:#23b24b !important">Institute Member Update  Password</h5>
+										</div>
+										<div class="p-2 mt-4">
+											<form id="forgot-passward-form" action="{{ route('institute-postresetPassword') }}" method="POST" >
+												@csrf
+												<input type="hidden" name="token" value="{{ $token }}">
+												<div class="mb-3">
+													<label for="useremail" class="form-label">Email <span class="text-danger">*</span></label>
+													<input type="email" class="form-control email_input" name="email"  value="{{ $email }}" readonly>
+												</div>		
+												
+												<div class="mb-3">
+													<label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+													<input type="password" class="form-control" id="password2" autocomplete="one-time-code" name="password" placeholder="Create Your Password" required>
+												</div>
+												
+												<div class="mb-3">
+													<label for="cpassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+													<input type="password" class="form-control" id="cpassword2" autocomplete="one-time-code" name="cpassword" placeholder="Enter Confirm Password" required>
+													<span id="cpassword-error2" class="text-danger" ></span>
+												</div>
+												
+												
+												<div class="mt-4">
+													<button class="btn btn-success w-100" id="submit-button" type="submit">Submit</button>
+												</div>
+												
+												
+											</form>
+										</div>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer -->
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="text-center">
+								<p class="mb-0 text-muted">
+									{{ date('Y') }} © All Rights Reserved. <i class="fa fa-heart heart text-danger"></i> 
+									<a href="{{ url('/') }}" target="_blank">Gaam Raam Ngo</a> And Powered By <a href="{{ url('https://www.pearlorganisation.com/') }}" target="_blank">Pearl Organisation</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- end Footer -->
+		</div>
+		<!-- end auth-page-wrapper -->
+		<!-- JAVASCRIPT -->
+		<script src="{{ asset('admin/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+		<script src="{{ asset('admin/assets/libs/simplebar/simplebar.min.js') }}"></script>
+		<script src="{{ asset('admin/assets/libs/node-waves/waves.min.js') }}"></script>
+		<script src="{{ asset('admin/assets/libs/feather-icons/feather.min.js') }}"></script>
+		<script src="{{ asset('admin/assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
+		<script src="{{ asset('admin/assets/js/plugins.js') }}"></script>
+		<!-- particles js -->
+		<script src="{{ asset('admin/assets/libs/particles.js/particles.js') }}"></script>
+		<!-- particles app js -->
+		<script src="{{ asset('admin/assets/js/pages/particles.app.js') }}"></script>
+		<!-- validation init -->
+		<script src="{{  asset('admin/assets/js/pages/form-validation.init.js')  }}"></script>
+		<!-- password create init -->
+		<script src="{{ asset('admin/assets/js/pages/passowrd-create.init.js') }}"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+		@if (Session::has('success') || Session::has('error') || $errors->any())
+		<script>
+			@if (Session::has('success'))
+			    var messageType = 'success';
+			    var messageColor = 'green';
+			    var message = "{{ Session::get('success') }}";
+			@elseif (Session::has('error'))
+			    var messageType = 'warning';
+			    var messageColor = 'orange';
+			    var message = "{{ Session::get('error') }}";
+			@elseif ($errors->any())
+			    var messageType = 'error';
+			    var messageColor = 'red';
+			    var message = @json($errors->all());
+			@endif
+			
+			if (Array.isArray(message)) {
+			    message.forEach(function (msg) {
+			        iziToast[messageType]({
+			            message: msg,
+			            position: 'topRight',
+			            timeout: 4000,
+			            displayMode: 0,
+			            color: messageColor,
+			            theme: 'light',
+			            messageColor: 'black',
+			        });
+			    });
+			} else {
+			    iziToast[messageType]({
+			        message: message,
+			        position: 'topRight',
+			        timeout: 4000,
+			        displayMode: 0,
+			        color: messageColor,
+			        theme: 'light',
+			        messageColor: 'black',
+			    });
+			}
+		</script>
+		@endif
+        <script>
+            $(document).on('submit', '#forgot-passward-form', function() {
+                let btn = $('button[type="submit"]');
+                btn.html('<span class="spinner-border spinner-border-sm"></span> Please Wait...').prop('disabled', true).css('cursor', 'no-drop');
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('#cpassword').on('keyup', function(){
+                    var password = $('#password').val();
+                    var cpassword = $('#cpassword').val();
+                    let btn = $('button[type="submit"]');
+                    
+                    if(password != cpassword){
+                        $('#cpassword-error').html('Password Do Not Match');
+                        btn.prop('disabled', true).css('cursor', 'no-drop');
+                    }else{
+                        $('#cpassword-error').html('');
+                        btn.prop('disabled', false).css('cursor', 'pointer');
+                    }
+                });
+            });
+
+			 $(document).ready(function(){
+                $('#cpassword2').on('keyup', function(){
+                    var password = $('#password2').val();
+                    var cpassword = $('#cpassword2').val();
+                    let btn = $('#submit-button');
+                    
+                    if(password != cpassword){
+                        $('#cpassword-error2').html('Password Do Not Match');
+                        btn.prop('disabled', true).css('cursor', 'no-drop');
+                    }else{
+                        $('#cpassword-error2').html('');
+                        btn.prop('disabled', false).css('cursor', 'pointer');
+                    }
+                });
+            });
+        </script>
+        
+	</body>
+</html>
